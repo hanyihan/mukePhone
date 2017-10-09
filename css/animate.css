@@ -1,0 +1,301 @@
+
+.screen-1-heading,
+.screen_phone ,
+.screen_shedow{
+	transition: all 1s;
+}
+
+.screen-1-heading-init,
+.screen_shedow-init {
+	opacity: 0;
+	transform: translate(0,100%);
+
+}
+
+.screen-1-heading-done,
+.screen_phone-done,
+.screen_shedow-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.screen_phone-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+
+}
+
+/*第二屏动画*/
+
+.screen-2-heading,
+.screen-2-subheading ,
+.screen-2_phone{
+	transition: all 1s;
+}
+
+.screen-2_point {
+	transition: all .5s 1s;
+}
+
+.screen-2-subheading-init ,
+.screen-2_phone-init,
+.screen-2-heading-init {
+	opacity: 0;
+	transform: translate(0,100%);
+
+}
+
+.screen-2-subheading-done ,
+.screen-2_phone-done,
+.screen-2-heading-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.screen-2-subheading-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+
+.screen-2_point_i-1-init {
+	opacity: 0;
+	transform: translate(-100%,0);
+}
+
+.screen-2_point_i-2-init,
+.screen-2_point_i-3-init {
+	opacity: 0;
+	transform: translate(100%,0);
+}
+
+.screen-2_point_i-1-done,
+.screen-2_point_i-2-done,
+.screen-2_point_i-3-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*第三屏动画*/
+
+.screen-3-heading,
+.screen-3-subheading,
+.screen-3__phone,
+.screen-3__feature {
+	transition: all 1s;
+}
+
+
+.screen-3__phone-init,
+.screen-3-heading-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+
+}
+
+.screen-3__feature-init {
+	opacity: 0;
+	transform: scale(.5);
+
+}
+
+
+.screen-3-subheading-init  {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+
+.screen-3__phone-done,
+.screen-3-heading-done,
+.screen-3__feature-done,
+.screen-3-subheading-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.screen-3__features-item {
+	transition: all .5s;
+}
+
+.screen-3__features-item:hover {
+	transform: scale(1.1);
+}
+
+/*第四屏动画*/
+
+.screen-4_heading,
+.screen-4_subheading {
+	transition: all 1s;
+}
+
+.screen-4_subheading-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+
+.screen-4_heading-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+
+.screen-4_heading-done,
+.screen-4_subheading-done {
+	opacity: 1;
+	transform: translate(0,0);
+
+}
+
+.screen-4_type_item-i-1,
+.screen-4_type_item-i-2,
+.screen-4_type_item-i-3,
+.screen-4_type_item-i-4 {
+	transition: all 1s;
+}
+
+.screen-4_type_item-i-1-init,
+.screen-4_type_item-i-2-init,
+.screen-4_type_item-i-3-init,
+.screen-4_type_item-i-4-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+
+.screen-4_type_item-i-1-done,
+.screen-4_type_item-i-2-done,
+.screen-4_type_item-i-3-done,
+.screen-4_type_item-i-4-done {
+	opacity: 1;
+}
+
+.screen-4_type_item-i-1 {
+	transition: 1s .5s
+
+}
+.screen-4_type_item-i-2 {
+	transition: 1s 1s
+
+}
+.screen-4_type_item-i-3{
+	transition: 1s 1.5s
+
+}
+.screen-4_type_item-i-4 {
+	transition: 1s 2s
+
+}
+
+/*第五屏动画*/
+
+.screen-5_heading,
+.screen-5_subheading,
+.screen-5_back {
+	transition: all 1s;
+}
+
+.screen-5_heading-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+
+.screen-5_subheading-init,
+.screen-5_back-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+
+.screen-5_heading-done,
+.screen-5_subheading-done,
+.screen-5_back-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*定义帧动画*/
+
+@-webkit-keyframes bounce {
+	0%,100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+/*使用帧动画*/
+.screen-2_point:before,
+.screen-2_point:after {
+	content: ' ';
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	background-color: rgba(255,0,0,.4);
+	-webkit-animation: bounce 2s infinite;
+	border-radius: 50%;
+
+}
+
+.screen-2_point:before {
+	-webkit-animation: bounce 2s infinite 1s;
+}
+
+
+.screen-2_point_i-1:before,
+.screen-2_point_i-1:after{
+	left: 192px;
+}
+
+/*导航条滚动样式*/
+
+.header {
+	transition: all 1s;
+}
+
+.header_stadus_back {
+	background-color: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+}
+
+.header_stadus_back .header_logo,
+.header_stadus_back .header__nav-item {
+	color: #fff;
+}
+
+.header_stadus_back .header__nav-item_status-active {
+	color: #f00;
+}
+
+/*大纲 _stadus_in 样式*/
+
+.outline {
+	opacity: 0;
+	transition: all 1s;
+	transform: translate(100%,0);
+}
+
+.outline_stadus_in {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
